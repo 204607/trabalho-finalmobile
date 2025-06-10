@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="black">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Habilidades</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" *ngFor="let skill of skills">
+        <ion-card>
+          <ion-card-header>
+            <ion-icon name="checkmark-done-circle-outline" slot="start" color="success"></ion-icon>
+            <ion-card-title>{{ skill.nome }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-progress-bar [value]="skill.nivel / 100" color="secondary"></ion-progress-bar>
+            <div class="skill-level">{{ skill.nivel }}%</div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

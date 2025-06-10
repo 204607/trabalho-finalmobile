@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Sobre Mim</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Sobre Mim</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div style="padding: 20px; text-align: center;">
+    <ion-icon name="person-circle-outline" style="font-size: 64px; color: #3880ff;"></ion-icon>
+
+    <ion-avatar style="margin: 20px auto; width: 120px; height: 120px;">
+      <img src="assets/fotominha.jpg" alt="Foto de João Pedro" />
+    </ion-avatar>
+
+    <h2>João Pedro Moreira Mezzomo</h2>
+
+    <p>
+      Tenho 19 anos, sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> e apaixonado por desenvolvimento mobile e web.
+    </p>
+
+    <!-- Formação Acadêmica -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="school-outline" style="margin-right: 8px;"></ion-icon>
+          Formação Acadêmica
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+        <p><strong>Instituição:</strong> Universidade de Passo Fundo </p>
+        <p><strong>Período:</strong> 2024 - 2027 (previsão)</p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Experiência -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="briefcase-outline" style="margin-right: 8px;"></ion-icon>
+          Experiência
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Projeto Acadêmico:</strong> Desenvolvimento de apps com Ionic</p>
+        <p><strong>Descrição:</strong> Participei de projetos práticos durante a disciplina, desenvolvendo apps híbridos com HTML, CSS, JavaScript, Angular e Ionic.</p>
+        <p><strong>Outras experiências:</strong> Em busca de um <strong>estágio</strong> na area!</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

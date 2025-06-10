@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons *ngIf="projetoSelecionado" slot="start">
+      <ion-button (click)="voltar()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      {{ projetoSelecionado ? 'Detalhes do Projeto' : 'Meus Projetos' }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Lista de projetos -->
+  <ion-list *ngIf="!projetoSelecionado">
+    <ion-item button *ngFor="let projeto of projetos" (click)="verProjeto(projeto)">
+      <ion-label>
+        <h2>{{ projeto.titulo }}</h2>
+        <p>{{ projeto.descricao }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Detalhe de projeto -->
+  <div *ngIf="projetoSelecionado">
+    <h2>{{ projetoSelecionado.titulo }}</h2>
+    <p>{{ projetoSelecionado.descricao }}</p>
+    <p>
+      Link do projeto:
+      <a [href]="projetoSelecionado.link" target="_blank">{{ projetoSelecionado.link }}</a>
+    </p>
+  </div>
+
+</ion-content>

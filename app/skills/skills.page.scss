@@ -1,0 +1,17 @@
+ion-card {
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+ion-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-level {
+  text-align: right;
+  font-weight: 600;
+  margin-top: 8px;
+  color: var(--ion-color-medium);
+}
